@@ -1,0 +1,7 @@
+*.o
+*.uf2
+build/
+.direnv/
+.cache/
+secret.h
+compile_commands.json
