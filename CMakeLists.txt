@@ -8,7 +8,9 @@ set(CMAKE_C_STANDARD 17)
 set(PICO_BOARD pico_w)
 pico_sdk_init()
 
-add_executable(picosensor_sht30 src/main.c)
+add_executable(picosensor_sht30
+	src/main.c
+	src/time.c)
 target_include_directories(picosensor_sht30 PRIVATE src)
 target_link_libraries(picosensor_sht30
 	pico_cyw43_arch_lwip_sys_freertos
@@ -16,8 +18,8 @@ target_link_libraries(picosensor_sht30
 	pico_mbedtls
 	pico_stdlib
 	hardware_i2c
+	hardware_timer
 	FreeRTOS-Kernel-Heap4)
 
-pico_enable_stdio_usb(picosensor_sht30 1)
-pico_enable_stdio_usb(picosensor_sht30 1)
+pico_enable_stdio_semihosting(picosensor_sht30 1)
 pico_add_extra_outputs(picosensor_sht30)

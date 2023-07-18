@@ -138,6 +138,7 @@ to exclude the API function. */
 #define INCLUDE_xTaskGetHandle 1
 #define INCLUDE_xTaskResumeFromISR 1
 #define INCLUDE_xQueueGetMutexHolder 1
+#define INCLUDE_xSemaphoreCreateMutex 1
 
 /* A header file that defines trace macro can be included here. */
 

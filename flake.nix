@@ -20,10 +20,12 @@
             cmake
             gcc
             gcc-arm-embedded
+            gdb
             libusb
             ninja
             openocd
             python3
+            picotool
           ];
         };
       });
